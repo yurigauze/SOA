@@ -1,0 +1,9 @@
+{
+  "bancoMysql":{
+    "nome": "arquitetura",
+    "url": "localhost",
+    "usuario": "root",
+    "senha": "root"
+  }
+
+}
