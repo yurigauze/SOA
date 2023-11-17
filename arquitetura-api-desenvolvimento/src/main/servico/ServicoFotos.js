@@ -1,17 +1,24 @@
 "use strict";
 
-const { default: GeradorDeLink } = require("./GeradorDeLink.jsx");
-
+const  GeradorDeLink  = require('./GeradorDeLink');
 
 module.exports = class ServicoFotos {
 
+    static async buscarFotosCampeao() {
+            try {
+                const link = GeradorDeLink(1);
+                return link
+            } catch (error) {
+                throw new Error("Falha ao buscar fotos: " + error);
+            }
+        }
 
-    static async buscarCampeao() {
+            static async buscarFotosGatos() {
         try {
-            const link = GeradorDeLink();
+            const link = GeradorDeLink(2);
             return link
         } catch (error) {
             throw new Error("Falha ao buscar fotos: " + error);
         }
-    } // buscarFotos
+    }// buscarFotos// buscarFotos
 } // class

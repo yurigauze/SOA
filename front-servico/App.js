@@ -7,12 +7,17 @@ export default function App() {
 
   const fetchRandomImage = async () => {
     try {
-      const response = await fetch(`https://28e4-170-0-145-84.ngrok.io/fotos/${apiPath}`);
+      const response = await fetch(`https://e199-200-17-101-69.ngrok.io/fotos/${apiPath}`);
       const data = await response.json();
       setCurrentImageUrl(data);
     } catch (error) {
       console.error('Error fetching random image:', error);
     }
+  };
+
+  const toggleApiPath = () => {
+    // Alterna entre 'cachorros' e 'gatos'
+    setApiPath(apiPath === 'campeao' ? 'gatos' : 'campeao');
   };
 
   return (
